@@ -17,8 +17,6 @@ const HeroSchema = new Schema ({
         require:true,
         default:10
     }
-    // date_of_birth: { type: Date },
-    // date_of_death: { type: Date },
 })
 
 module.exports = mongoose.model('Hero', HeroSchema)
