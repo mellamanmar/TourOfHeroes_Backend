@@ -1,105 +1,57 @@
-# Introducción a Express.js
+# API de una lista de súperheroe
+<img src='image/heroes.png' alt="To Do List" width="230" height="190">
 
-<img src="img/programate-academy.png" alt="Logo Programate">
+### Autor: Marianny Márquez
+### Prográmate Academy
+<img src='image/programate.png' alt='Logo Prográmate' width="180" height="70">
 
-## Objetivo
+## Descripción
 
-Vamos a desarrollar una API conectada a MongoDB, para complementar el tutorial de [Angular](https://angular.io/tutorial/tour-of-heroes) y poder tener un proyecto fullstack usando el stack MEAN
+Este proyecto está pensado para realizar una lista de súperheroes utilizando la base de datos de MongoDB Atlas.
 
-## primeros pasos
-Recuerda debes tener instalado [Node.js](https://nodejs.org/en/download), despues crea y entra a la carpeta donde vas a guardar el proyecto. Una vez clones el repositorio recuerda entrar a la carpeta con
+## Funcionalidades
+- Obtener y actualizar los súperheroes.
+- Obtener tarsúperheroeseas por ID.
+- Crear nuevos súperheroes.
+- Eliminar un súperheroes.
 
-```
-cd node-basic-c9
-```
-y instala los paquetes usando el comando:
+## Tecnologías utilizadas
+- JavaScript.
+- Node.
+- Expresss.
+- Nodemon.
+- MongoDB y Mongoose.
 
-```
-npm i
-```
+## Instalación
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta el directorio del proyecto.
+3. Instala las dependencias necesarias para poder usar la API:
+    npm i express mongoose cors nodemon
 
+## Uso
+1. Inicia la aplicación, se deben abrir dos termianles
+node index.js ó npm run dev
+2. Accede a la ruta http://localhost:3005/api/heroes y así podrás consumir la API desde tu servidor local.
 
-## Levantar el Servidor
+Puedes acceder a los endpoints desde Postman y de esta manera consumir la Api desde allí:
 
+1. http://localhost:3005/api/heroes -Obtener todos los súperheroes-
+2. http://localhost:3005/api/heroes/'id' -Obtener los súperheroes por ID-
+3. http://localhost:3005/api/heroes/delete/'id' -Eliminar súperheroes-
+4. http://localhost:3005/api/heroes'id' -Editar/actualizar los súperheroes y sus características-
+5. http://localhost:3005/api/heroes/create -Crear nuevas súperheroes-
 
-Para levantar el servidor vamos a correr el siguiente comando en una consola al nivel del index.js
-```
-node index.js
-```
+Nota: Para crear y actualizar tareas debes hacerlo con el siguiente formato en JSON
 
-## Documentación de MongoDB
+``` 
 
-Van a crear la cuenta, esta es la documentación recomendada para MongoDB, aunque pueden encontrar más en línea.
-
-* [Quick Start](https://www.mongodb.com/docs/drivers/node/current/quick-start/#quick-start) 
-* [Download and Install](https://www.mongodb.com/docs/drivers/node/current/quick-start/download-and-install/)
-
-* [Create a MongoDB Deployment](https://www.mongodb.com/docs/drivers/node/current/quick-start/create-a-deployment/)
-
-* [Create a Connection String](https://www.mongodb.com/docs/drivers/node/current/quick-start/create-a-connection-string/#create-a-connection-string)
-* [Connect to MongoDB](https://www.mongodb.com/docs/drivers/node/current/quick-start/connect-to-mongodb/)
-
-* [Express Tutorial Part 3: Using a Database (with Mongoose)]c
-
-## Variables de entorno
-
-Las variables de entorno son valores que se configuran en el sistema operativo y que pueden ser accedidos por las aplicaciones en tiempo de ejecución. En Node.js, puedes acceder a estas variables a través del objeto 'dotenv'.
-
-1. Crea un archivo .env en el directorio raíz de tu proyecto.
-
-2. Dentro de .env, define tus variables de entorno por ejemplo:
-
-```
-MONGO_DB_URI = `12lkjefoaih1209`
-```
-## Endpoints disponibles
-
-
-Finalmente probamos los endpoints:
-#### Postman Get Authors
-```
-localhost:3005/api/hero/
-```
-
-#### Get AutorFor Id
-```
-localhost:3005/api/hero/:id
-```
-
-#### Update Author
-Verbo patch
-```
-localhost:3005/api/hero/update/:id
-```
-con el siguiente esquema de json:
-```
 {
-    "first_name":"Capitan Python",
-    "faction":"Python",
-    "hp":50,
+    "task" : "Asignarle género a los libros",
+    "task_responsable" : "Pepito Perez",
+    "deadline" : "09-30-2023",
+    "status" : "64a600bda2472a22f78cf5b4",
+    "update" : "Falta enumerar todos los libros"
 }
-```
 
-#### Create Author
 ```
-localhost:3005/api/hero/create
-```
-con el siguiente esquema de json:
-```
-{
-    "first_name":"Capitan Python",
-    "faction":"Python",
-    "hp":50,
-}
-```
-
-#### Delete Author
-```
-localhost:3005/api/hero/delete/:id
-```
-
-## Contacto
-
-Si tienes alguna pregunta, sugerencia o deseas obtener el workbook para desarrollar este proyecto, no dudes en contactarme a través de: [jsanchez@educamas.com.co](jsanchez@educamas.com.co).
-
 

@@ -39,7 +39,7 @@ const controllerHero = {
             const name = req.body.name
             const super_power = req.body.super_power
             const level = req.body.level
-            await Author.findByIdAndUpdate(id,{
+            await Hero.findByIdAndUpdate(id,{
                 name:name,
                 super_power:super_power,
                 level:level
