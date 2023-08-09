@@ -1,5 +1,5 @@
 # API de una lista de súperheroe
-<img src='image/heroes.png' alt="To Do List" width="230" height="190">
+<img src='image/heroes.png' alt="Heroes" width="230" height="190">
 
 ### Autor: Marianny Márquez
 ### Prográmate Academy
@@ -7,7 +7,7 @@
 
 ## Descripción
 
-Este proyecto está pensado para realizar una lista de súperheroes utilizando la base de datos de MongoDB Atlas.
+Este proyecto está pensado para realizar una lista de súperheroes con su súperpoder, nivel y nombre del mismo, utilizando la base de datos de MongoDB Atlas.
 
 ## Funcionalidades
 - Obtener y actualizar los súperheroes.
